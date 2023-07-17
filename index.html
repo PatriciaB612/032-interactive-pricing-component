@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive pricing component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <p class="title">Simple, traffic-based pricing</p>
+      <p class="subtitle">Sign-up for our 30-day trial.</p>
+      <p class="subtitle">No credit card required.</p>
+    </header>
+    <main>
+      <div class="container">
+        <div class="section-one">
+          <p class="pageviews" id="pageviews">100k Pageviews</p>
+          <input
+            type="range"
+            name="range-slider"
+            id="range-slider"
+            for="pageviews"
+            min="0"
+            step="25"
+            step="50"
+            step="75"
+            max="100"
+          />
+          <p class="rates">
+            <span id="rate">$16.00</span>
+            <span class="light-text" id="frequency">/month</span>
+          </p>
+          <div class="billing-options">
+            <p class="monthly-billing">Monthly Billing</p>
+            <button type="button" class="toggle-btn bth">
+              <div class="inner-circle"></div>
+            </button>
+            <p class="yearly-billing">Yearly Billing</p>
+            <p class="discount-one discount">-25%</p>
+            <p class="discount-two discount">25% discount</p>
+          </div>
+        </div>
+        <hr />
+        <div class="section-two">
+          <div class="benefits">
+            <p class="benefit">
+              <img class="icon-check" src="images/icon-check.svg" alt="" />
+              Unlimited websites
+            </p>
+            <p class="benefit">
+              <img class="icon-check" src="images/icon-check.svg" alt="" />100%
+              data ownership
+            </p>
+            <p class="benefit">
+              <img class="icon-check" src="images/icon-check.svg" alt="" />Email
+              reports
+            </p>
+          </div>
+          <button type="button" class="start-trial-btn btn">
+            Start my trial
+          </button>
+        </div>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener noreferer"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://github.com/PatriciaB612"
+        target="_blank"
+        rel="noopener noreferer"
+        >Silvia Patricia Soto</a
+      >.
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
