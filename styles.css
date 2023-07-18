@@ -121,16 +121,18 @@ hr {
 /* range slider */
 
 input[type='range'] {
+  position: relative;
   width: 90%;
   margin: 0 auto;
   -webkit-appearance: none;
   appearance: none;
   margin-bottom: 1em;
   cursor: pointer;
+  background-color: transparent;
+  z-index: 2;
 }
 
 input[type='range']::-webkit-slider-runnable-track {
-  background: #a4f3eb;
   border-radius: 5px;
   height: 8px;
 }
@@ -213,6 +215,28 @@ input[type='range']::-ms-thumb:focus {
 
 input[type='range']::-ms-thumb:active {
   background-color: #24aea1;
+}
+
+.section-one {
+  position: relative;
+}
+
+.bar {
+  position: absolute;
+  z-index: 1;
+  left: 15px;
+  top: 58px;
+  width: 90%;
+  height: 8px;
+  border-radius: 5px;
+  background: #ecf0fb;
+}
+
+.fill {
+  display: block;
+  width: 50%;
+  height: 100%;
+  background-color: #a4f3eb;
 }
 
 /* buttons */
@@ -315,6 +339,11 @@ input[type='range']::-ms-thumb:active {
   input[type='range'] {
     width: 100%;
     grid-column: 1/3;
+  }
+
+  .bar {
+    left: 15px;
+    top: 90px;
   }
 
   .billing-options {

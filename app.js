@@ -3,9 +3,13 @@ const pageviews = document.getElementById('pageviews')
 const rateEl = document.getElementById('rate')
 const toggleBtn = document.querySelector('.toggle-btn')
 const frequencyEl = document.getElementById('frequency')
+const fillRange = document.getElementById('fill')
 
 rangeSlider.addEventListener('input', () => {
   const rangeValue = rangeSlider.value
+
+  fillRange.style.width = rangeValue + '%'
+
   getMonthlyRate(rangeValue)
 
   if (toggleBtn.firstElementChild.classList.contains('toggled')) {
